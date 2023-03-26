@@ -1,10 +1,12 @@
 import React from "react";
+import { addToDB } from "../../Utilites/localstorage";
 import "./Cosmetics.css";
 
 const Cosmetics = (props) => {
   const { name, price, id } = props.cos;
+
   const addToCart = (id) => {
-    console.log("item id", id);
+    addToDB(id);
   };
   return (
     <div>
